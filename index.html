@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet Engineering Class</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="img/favicon.png" />
+  </head>
+  <body>
+    <!-- ---------------------------------Menu--------------------------------- -->
+    <!-- hamburger -->
+    <input type="checkbox" id="navi-toggle" class="checkbox" />
+    <label for="navi-toggle" class="button">
+      <span class="icon"></span>
+    </label>
+
+    <!-- nav -->
+    <nav class="nav">
+      <ul class="list" id="menu-items">
+        <li><a href="#header">01 START</a></li>
+        <li>
+          <a href="#course-lectures">02 COURSE LECTURES</a>
+        </li>
+        <li><a href="#related-books">03 RELATED BOOKS</a></li>
+      </ul>
+    </nav>
+    <div class="background"></div>
+    <!-- ---------------------------------end of menu--------------------------------- -->
+    <!-- ---------------------------------header--------------------------------- -->
+    <section id="header" class="header">
+      <div class="banner">
+        <h1 class="banner-heading">internet engineering</h1>
+        <p class="banner-paragraph">
+          is what we are going to learn in this course
+        </p>
+        <a class="banner-button" href="#related-books">
+          see this course related books
+        </a>
+      </div>
+    </section>
+    <!-- ---------------------------------end of header--------------------------------- -->
+
+    <!-- ---------------------------------Lectures--------------------------------- -->
+    <div class="lectures" id="course-lectures">
+      <div class="cards item2">
+        <img
+          style="opacity: 0.5"
+          src="img/http_icon.png"
+          alt="http icon"
+          width="100"
+          height="100"
+        />
+        <h3 class="card-heading">HTTP</h3>
+        <p class="card-paragraph">
+          The Hypertext Transfer Protocol is an application layer protocol.
+          Communication between client computers and web servers is done by
+          sending HTTP Requests and receiving HTTP Responses.
+        </p>
+      </div>
+      <div class="cards item3">
+        <img
+          style="opacity: 0.5"
+          src="img/css_icon.png"
+          alt="css icon"
+          width="80"
+          height="100"
+        />
+        <h3 class="card-heading">HTML CSS</h3>
+        <p class="card-paragraph">
+          HTML (Hyper Text markup Language) is the standard markup language for
+          Web pages. CSS is the language we use to style an HTML document. CSS
+          describes how HTML elements should be displayed.
+        </p>
+      </div>
+      <div class="cards item4">
+        <img
+          style="opacity: 0.5"
+          src="img/js_icon.png"
+          alt="js icon"
+          width="100"
+          height="120"
+        />
+        <h3 class="card-heading">JAVASCRIPT</h3>
+        <p class="card-paragraph">
+          Javascript is the programming language of the Web. Javascript often
+          abbreviated to JS is a lightweight, interpreted, or just-in-time
+          compiled programming language with first-class functions.
+        </p>
+      </div>
+      <div class="cards item5">
+        <img
+          style="opacity: 0.5"
+          src="img/go_icon.png"
+          alt="go icon"
+          width="100"
+          height="100"
+        />
+        <h3 class="card-heading">GOLANG</h3>
+        <p class="card-paragraph">
+          Go language is a programming language initially developed at Google.
+          It is a statically typed language having syntax similar to that of C.
+          Go is used to create computer programs.
+        </p>
+      </div>
+    </div>
+    <!-- ---------------------------------end of lectures--------------------------------- -->
+
+    <!-- ---------------------------------Related Books--------------------------------- -->
+    <div id="related-books" class="related-books">
+      <h1 class="books-title">MOST POPULAR BOOKS</h1>
+      <div class="content">
+        <div class="flip-card item6">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/Book1-2.png" width="250" height="180" />
+              <div class="books-info">
+                <p>By David Flanagan</p>
+                <div class="line"></div>
+                <p>Seventh Edition</p>
+                <p>Published at 2020</p>
+              </div>
+            </div>
+            <div class="flip-card-back card1">
+              <div id="maincontent">
+                <h3 class="price">31.00$</h3>
+                <button id="button1" class="btn-buy">Buy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- popup -->
+        <div id="overlay"></div>
+        <div id="popup">
+          <div class="popupcontrols">
+            <span id="popupclose">X</span>
+          </div>
+          <div class="popupcontent">
+            <div class="popup-item1">
+              <img id="img-popup" src="" width="270px" height="400px" />
+            </div>
+            <div class="popup-item2">
+              <h2 id="title-popup"></h2>
+              <p id="paragraph-popup"></p>
+              <a id="btn-popup" class="btn-popup" href="" target="_blank"
+                >BUY NOW</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- end of popup -->
+
+        <div class="flip-card item7">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                class="go-pic"
+                src="img/Book2-2.jpg"
+                width="250"
+                height="180"
+              />
+              <div class="books-info">
+                <p>By Robin Wieruch</p>
+                <div class="line"></div>
+                <p>2022 Edition</p>
+                <p>Published at 2022</p>
+              </div>
+            </div>
+            <div class="flip-card-back card2">
+              <h3 class="price">34.99$</h3>
+              <button id="button2" class="btn-buy">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card item8">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/Book3-2.png" width="250" height="180" />
+              <div class="books-info">
+                <p>By Caleb Doxsey</p>
+                <div class="line"></div>
+                <p>First Edition</p>
+                <p>Published at 2016</p>
+              </div>
+            </div>
+            <div class="flip-card-back card3">
+              <h3 class="price">28.32$</h3>
+              <button id="button3" class="btn-buy btn-open">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------------end of Related Books--------------------------------- -->
+
+    <!-- ---------------------------------Footer--------------------------------- -->
+    <div class="footer">
+      <div class="item9">
+        <a class="f-sep" href="#">Home</a>
+        <a class="f-sep" href="#">class info</a>
+        <a class="f-sep" href="#">contact us</a>
+        <a class="f-sep" href="#">privacy policy</a>
+        <a class="f-sep" href="#">terms</a>
+      </div>
+      <div class="item10">Built by Shiva Moulodi for Web developing course</div>
+    </div>
+    <!-- ---------------------------------end of footer--------------------------------- -->
+    <script src="script.js"></script>
+  </body>
+</html>

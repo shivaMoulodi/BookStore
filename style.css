@@ -1,0 +1,538 @@
+/* ---------------------------------common styles--------------------------------- */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  scroll-snap-type: y mandatory;
+}
+
+.lectures,
+.related-books,
+.footer {
+  display: grid;
+  margin: 10px;
+}
+/* ---------------------------------end of common styles--------------------------------- */
+
+/* ---------------------------------header--------------------------------- */
+.header {
+  margin: 10px;
+  height: 550px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url(img/Header.jpg) center no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.brand {
+  display: flex;
+  cursor: pointer;
+}
+
+.banner {
+  color: #ddd;
+  height: 55rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 7rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  animation: anim 1.5s 0.5s ease-in-out;
+  text-transform: uppercase;
+}
+
+.banner-paragraph {
+  font-size: 3.5rem;
+  font-weight: 300;
+  animation: anim 1.5s 0.5s ease-in-out;
+  text-transform: uppercase;
+}
+
+.banner-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 35rem;
+  padding: 1.2rem 2rem;
+  font-size: 1.5rem;
+  color: rgb(164, 164, 164);
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 10rem;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+  animation: btn 1s 2s backwards;
+  text-transform: uppercase;
+  transition-duration: 0.4s;
+}
+.banner-button:hover {
+  background: rgb(65, 208, 237);
+  color: #fff;
+  font-size: 1.5rem;
+}
+@keyframes anim {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes btn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* ---------------------------------end of header--------------------------------- */
+
+/* ---------------------------------Lectures--------------------------------- */
+.lectures {
+  margin: 10px;
+  height: 500px;
+  background: linear-gradient(
+      to bottom right,
+      rgba(42, 244, 170, 0.52),
+      rgba(32, 139, 210, 0.73),
+      rgba(218, 53, 230, 0.73)
+    ),
+    url(img/Background.jpg) center no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item2,
+.item3,
+.item4,
+.item5 {
+  opacity: 0.5;
+  height: 400px;
+  width: 250px;
+  background-color: rgb(222, 228, 222);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: 10px;
+}
+.card-heading {
+  font-size: 18px;
+  opacity: 0.5;
+}
+.card-paragraph {
+  font-size: 15px;
+  text-align: center;
+  opacity: 0.5;
+  padding: 5px;
+}
+.cards:hover {
+  opacity: 0.7;
+  transition: all 0.2s ease-out;
+  box-shadow: 0px 6px 12px rgba(21, 21, 21, 0.2);
+  top: -4px;
+  border: 1px solid #cccccc;
+  background-color: white;
+}
+
+.item2 {
+  grid-column: 1 / 4;
+}
+.item3 {
+  grid-column: 4 / 7;
+}
+.item4 {
+  grid-column: 7 / 10;
+}
+.item5 {
+  grid-column: 10 / 13;
+}
+/* ---------------------------------end of lectures--------------------------------- */
+
+/* ---------------------------------Related Books--------------------------------- */
+.related-books {
+  background-color: #e1e9f2;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+}
+.books-title {
+  display: block;
+  color: midnightblue;
+  letter-spacing: 2px;
+  font-weight: 800;
+  margin: auto;
+  padding: 30px;
+  background: linear-gradient(
+    to right,
+    midnightblue,
+    midnightblue 50%,
+    royalblue 0%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+}
+.books-title:hover {
+  background-position: 0 100%;
+}
+
+.flip-card {
+  width: 250px;
+  height: 400px;
+  margin: 15px 45px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #fff;
+  color: black;
+}
+.books-info {
+  color: #868585;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.line {
+  border: 1px solid #ececec;
+  width: 140px;
+  height: 0px;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.card1 {
+  background-color: rgb(171, 202, 191);
+}
+.card2 {
+  background-color: #97cee0;
+}
+.card3 {
+  background-color: #dbafe6;
+}
+.price {
+  font-size: 23px;
+  letter-spacing: 1.5px;
+}
+.btn-buy {
+  height: 45px;
+  width: 150px;
+  color: rgb(241, 249, 245);
+  font-size: 30px;
+  font-weight: bold;
+  background-color: rgba(187, 187, 187, 0.3);
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  transition: background-color 0.5s;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.btn-buy:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.item6 {
+  grid-column: 1 / 5;
+}
+.item7 {
+  grid-column: 5 / 9;
+}
+.item8 {
+  grid-column: 9 / 13;
+}
+
+/* popup */
+#overlay {
+  display: none;
+  position: absolute;
+  background: #999;
+  width: 200%;
+  height: 200%;
+  opacity: 0.5;
+  z-index: 100;
+  overflow: visible;
+}
+.popupcontent {
+  display: grid;
+}
+.popup-item1 {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+.popup-item2 {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  text-align: left;
+}
+#title-popup {
+  font-size: 20px;
+  text-align: center;
+  color: rgb(23, 107, 164);
+  margin: 20px;
+}
+#paragraph-popup {
+  color: #868585;
+  font-size: 12px;
+  column-count: 2;
+  column-rule: 1px solid #ddd;
+  margin: 20px;
+  text-align: left;
+  line-height: 25px;
+}
+.btn-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 40px;
+  width: 110px;
+  color: rgb(241, 249, 245);
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgb(23, 107, 164);
+  border: 1px solid #cccccc;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 10px 30px;
+}
+.btn-popup:hover {
+  background: rgb(65, 208, 237);
+  color: #fff;
+}
+#popup {
+  display: none;
+  position: absolute;
+  top: 1200px;
+  background: #fff;
+  width: 900px;
+  height: 400px;
+  z-index: 200;
+}
+#popupclose {
+  float: right;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+/* ---------------------------------end of Related Books--------------------------------- */
+
+/* ---------------------------------Footer--------------------------------- */
+.footer {
+  color: hsl(0, 0%, 100%);
+  background: rgba(0, 0, 0, 0.831);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 70px 50px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.f-sep::before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 10px;
+}
+a:hover {
+  font-size: 18px;
+}
+.item9 {
+  grid-column: 1 / 7;
+}
+.item10 {
+  grid-column: 7 / 13;
+}
+/* ---------------------------------end of footer--------------------------------- */
+
+/* ---------------------------------Menu--------------------------------- */
+/* hamburger */
+.checkbox {
+  display: none;
+}
+
+.button {
+  background-color: white;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 5vh;
+  right: 5vw;
+  z-index: 2000;
+  box-shadow: 0 0.5rem 2rem black;
+  cursor: pointer;
+}
+
+.background {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 5.5vh;
+  right: 5.5vw;
+  background-image: linear-gradient(
+    45deg,
+    rgb(210, 118, 241),
+    rgb(33, 159, 217)
+  );
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -60vw;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s;
+}
+
+.list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+}
+
+.list > li > a:hover {
+  font-size: 32px;
+  color: rgb(91, 11, 129);
+}
+
+/* functionality */
+.checkbox:checked ~ .background {
+  transform: scale(80);
+}
+.checkbox:checked ~ .nav {
+  opacity: 1;
+  width: 100%;
+  right: 0;
+}
+
+/* styling hamb ICON */
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon,
+.icon::before,
+.icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: rgb(61, 61, 61);
+  display: inline-block;
+}
+
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+
+.icon::before {
+  top: -0.8rem;
+}
+.icon::after {
+  top: 0.8rem;
+}
+
+.button:hover icon:before {
+  top: -1rem;
+}
+.button:hover icon::after {
+  top: 1rem;
+}
+
+.checkbox:checked + .button .icon {
+  background-color: transparent;
+}
+
+.checkbox:checked + .button .icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.checkbox:checked + .button .icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+/* ---------------------------------end of menu--------------------------------- */
